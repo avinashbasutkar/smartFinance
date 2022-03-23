@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Group Detail</title>
+    <style>
+        button {
+          cursor: pointer;
+        }
+        a:link {
+          text-decoration: none;
+        }
+        a:visited {
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: none;
+        }
+        a:active {
+          text-decoration: none;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>{{ groupName }}</h1><span class="glyphicon glyphicon-edit"></span>
+    {{ expenseGroupForm.as_p }}
+    <h3>{{ groupMemberName }}</h3>
+    {{ expenseForm.as_p }}
+    <button><a href="#">Delete Group</a></button>
+    <button><a href={% url 'index' %}>Home</a></button>
+  </body>
+</html>

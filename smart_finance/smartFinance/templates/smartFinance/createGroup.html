@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Group</title>
+    <style>
+      #saveButton {
+        cursor: pointer;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:active {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create New Group</h1>
+
+    {% comment %}
+    <form>
+      <label for="groupName">Enter Group Name</label>
+      <input type="text" id="groupName" />
+      <input type="submit" value="Save" id="saveButton" />
+    </form>
+    {% endcomment %}
+
+    <form action="" method="post">
+      {% csrf_token %} {{ form|linebreaks }}
+      <a href="#">Add Another Member</a>
+      <input id="saveButton" type="submit" value="Save" />
+      {% if messages %} {% for message in messages %} {{ message }} {% endfor %}
+      {% endif %}
+    </form>
+    <br>
+    <br>
+    <button><a href={% url 'index' %}>Home</a></button>
+  </body>
+</html>
