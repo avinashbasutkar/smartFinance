@@ -36,7 +36,7 @@
 
     <form action="" method="post">
       {% csrf_token %} {{ form|linebreaks }}
-      <a href="#">Add Another Member</a>
+      <button><a href="#">Add Another Member</a></button>
       <input id="saveButton" type="submit" value="Save" />
       {% if messages %} {% for message in messages %} {{ message }} {% endfor %}
       {% endif %}

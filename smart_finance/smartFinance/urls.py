@@ -7,6 +7,7 @@ urlpatterns = [
      path('createGroup/', views.createGroup, name='createGroup'),
      path('groupMembers/', views.groupMembers, name='groupMembers'),
      path('groupDetail/<int:pk>/', views.groupDetail, name='groupDetail'),
+     path('groupDelete/<int:pk>/', views.groupDelete, name='groupDelete'),
      path('addExpense/', views.addExpense, name='addExpense'),
      path('expenseDetail/<int:pk>/', views.expenseDetail, name='expenseDetail'),
      path('accountDetail/', views.accountDetail, name='accountDetail'),

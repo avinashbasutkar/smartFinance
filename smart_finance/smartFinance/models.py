@@ -8,6 +8,7 @@ from django.utils import timezone
 class ExpenseGroup(models.Model):
     group_name = models.CharField(max_length=200)
     group_creation_date = models.DateTimeField('Group Creation Date')
+    group_member_name = models.CharField(max_length=200, default='null')
 
     def __str__(self):
         return self.group_name

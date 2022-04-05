@@ -23,13 +23,22 @@
           text-decoration: none;
         }
       </style>
+      <script>
+        function showGroupMemberField()
+        {
+          document.getElementById('addGroupMember').style.display="block";
+        }
+      </script>
   </head>
   <body>
     <h1>{{ groupName }}</h1><span class="glyphicon glyphicon-edit"></span>
     {{ expenseGroupForm.as_p }}
     <h3>{{ groupMemberName }}</h3>
-    {{ expenseForm.as_p }}
-    <button><a href="#">Delete Group</a></button>
+    
+    <input type="text" id="addGroupMember" name="addGroupMember" style="display:none;" />
+    <input type="button" id="addGroupMember" onClick="showGroupMemberField()" name="addGroupMember" value="Add Group Member" />
+    <button><a href={% url 'groupDelete' group.pk %}>Delete Group</a></button>
     <button><a href={% url 'index' %}>Home</a></button>
+    <button><a href={% url 'addExpense' %}>Add Expense</a></button>
   </body>
 </html>
